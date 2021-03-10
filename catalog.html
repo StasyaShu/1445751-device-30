@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="img/logo.svg" width="163" height="34" alt="логотип сайта Девайс">
+      </a>
+      <form>
+        <button type="submit"></button>
+        <input type="search" placeholder="Поиск по сайту">
+      </form>
+      <ul>
+        <li>
+          <p>Валентин Петухов</p>
+          <a href="#" aria-label="Кнопка Выйти">Выйти</a>
+          <!-- TODO: переделать на вариант с авторизированным пользователем -->
+        </li>
+        <li>
+          <a href="#" aria-label="Кнопка Сравнить">Сравнить</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Кнопка Корзины">Корзина</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#">Каталог товаров</a>
+    <ul>
+      <li>
+        <a href="#" aria-label="Ссылка информации о доставке">Доставка</a>
+      </li>
+      <li>
+        <a href="#" aria-label="Ссылка информации о гарантии">Гарантия</a>
+      </li>
+      <li>
+        <a href="#" aria-label="Ссылка с контактами">Контакты</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <section>
+      <h1>Название раздела Моноподы для селфи</h1>
+      <b>Моноподы для селфи</b>
+      <div class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li>
+            <a href="#">Моноподы для селфи</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>Каталог товаров</h1>
+      <div>
+        <b>Фильтр:</b>
+        <b>Сортировка:</b>
+        <ul>
+          <li>
+            <a href="#">По цене</a>
+          </li>
+          <li>
+            <a href="#">По типу</a>
+          </li>
+          <li>
+            <a href="#">По популярности</a>
+          </li>
+        </ul>
+        <ul class="scrolling">
+          <li>
+            <a class="scroll-up" href="#">
+              <!-- TODO: подключить svg -->
+            </a>
+          </li>
+          <li>
+            <a class="scroll-down active" href="#">
+              <!-- TODO: подключить svg -->
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+        <div class="price-range">
+          <fieldset class="filter-item">
+            <legend>Стоимость</legend>
+            <div class="range">
+              <p class="zero">от 0</p>
+              <p>до 5000</p>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+          </fieldset>
+          <!-- TODO: скомуниздить стили как у Седоны -->
+        </div>
+        <fieldset>
+          <legend>Цвет</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="black" id="checkbox-black" checked>
+              <label for="checkbox-black">Чёрный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="white" id="checkbox-white">
+              <label for="checkbox-white">Белый</label>
+            </li>
+            <li>
+              <input type="checkbox" name="blue" id="checkbox-blue" checked>
+              <label for="checkbox-blue">Синий</label>
+            </li>
+            <li>
+              <input type="checkbox" name="red" id="checkbox-red" checked>
+              <label for="checkbox-red">Красный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="pink" id="checkbox-pink">
+              <label for="checkbox-pink">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Bluetooth</legend>
+          <ul>
+            <li>
+              <input type="radio" name="bluetooth-inc" value="есть" id="yes" checked>
+              <label for="yes">Есть</label>
+            </li>
+            <li>
+              <input type="radio" name="bluetooth-inc" value="нет" id="no">
+              <label for="no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" name="show">Показать</button>
+      </form>
+      <div class="goods-list">
+        <ul>
+          <li>
+            <img src="#" width="360" height="380" alt="">
+            <b>Любительская селфи-палка</b>
+            <p>1 100 р.</p>
+          </li>
+          <li>
+            <img src="#" width="360" height="380" alt="">
+            <b>Профессиональная селфи-палка</b>
+            <p>1 500 р.</p>
+          </li>
+          <li>
+            <img src="#" width="360" height="380" alt="">
+            <b>Непотопляемая селфи-палка</b>
+            <p>1 500 р.</p>
+          </li>
+          <li>
+            <img src="#" width="360" height="380" alt="">
+            <b>Селфи-палка «Следуй за мной»</b>
+            <p>1 900 р.</p>
+          </li>
+        </ul>
+        <div class="pagination">
+          <a href="#">Назад</a>
+          <ul>
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+          </ul>
+          <a href="#">Вперед</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <p>Валентин Петухов</p>
+        <a href="#" aria-label="Кнопка Выйти">Выйти</a>
+        <!-- TODO: переделать на вариант с авторизированным пользователем -->
+      </li>
+      <li>
+        <a href="#">Сравнить</a>
+      </li>
+      <li>
+        <a href="#">Корзина</a>
+      </li>
+    </ul>
+    <img src="img/logo_footer.svg">
+    <p>г. Москва, ул. Строителей, 15</p>
+    <ul>
+      <li>
+        <a href="#">Доставка</a>
+      </li>
+      <li>
+        <a href="#">Гарантия</a>
+      </li>
+      <li>
+        <a href="#">Контакты</a>
+      </li>
+    </ul>
+    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+    <div class="social">
+      <ul class="social-list">
+        <li>
+          <a href="#" aria-label="Логотип Фейсбук">
+            <!-- TODO: Вставить Svg логотип -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Логотип Инстаграм">
+            <!-- TODO: Вставить Svg логотип -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Логотип Твиттер">
+            <!-- TODO: Вставить Svg логотип -->
+          </a>
+        </li>
+      </ul>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип-ссылка HTML Academy">
+        <!-- TODO: Вставить Svg логотип -->
+      </a>
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
