@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
 
-  </body>
+<body>
+  <header>
+    <nav>
+      <a>
+        <img src="img/logo.svg" width="163" height="34" alt="логотип сайта Девайс">
+      </a>
+      <form>
+        <button type="submit"></button>
+        <input type="search" placeholder="Поиск по сайту">
+      </form>
+      <ul>
+        <li>
+          <a href="#" aria-label="Кнопка Войти">Войти</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Кнопка Сравнить">Сравнить</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Кнопка Корзины">Корзина</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#">Каталог товаров</a>
+    <ul>
+      <li>
+        <a href="#" aria-label="Ссылка информации о доставке">Доставка</a>
+      </li>
+      <li>
+        <a href="#" aria-label="Ссылка информации о гарантии">Гарантия</a>
+      </li>
+      <li>
+        <a href="#" aria-label="Ссылка с контактами">Контакты</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <div class="main-slider-container">
+      <img>
+      <b>Делай селфи, как Бен Стиллер!</b>
+      <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
+      <p>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+      <a href="#" aria-label="Кнопка подробнее">Подробнее</a>
+      <table>
+        <tr>
+          <td>8,5 м</td>
+          <td>5 кг</td>
+          <td>Карбон</td>
+        </tr>
+        <tr>
+          <td>Длина палки</td>
+          <td>Вес палки</td>
+          <td>Материал</td>
+        </tr>
+      </table>
+    </div>
+    <ul>
+      <li>
+        <a href="#" aria-label="секция товаров виртуальной реальности">Виртуальная реальность</a>
+      </li>
+      <li>
+        <a href="#" aria-label="секция товаров монопады для селфи">Монопады для селфи</a>
+      </li>
+      <li>
+        <a href="#" aria-label="секция товаров экшн-камеры">Экшн-камеры</a>
+      </li>
+      <li>
+        <a href="#" aria-label="секция товаров фитнес-браслеты">Фитнес-браслеты</a>
+      </li>
+      <li>
+        <a href="#" aria-label="секция товаров умные часы">Умные часы</a>
+      </li>
+      <li>
+        <a href="#" aria-label="секция товаров квадрокоптеры">Квадрокоптеры</a>
+      </li>
+    </ul>
+    <div class="offers-slider-container">
+      <ul>
+        <li>
+          <a href="#">Доставка</a>
+          <!-- TODO: К каждой ссылке - свое выпадающее окно (слайдер) -->
+        </li>
+        <li>
+          <a href="#">Гарантия</a>
+        </li>
+        <li>
+          <a href="#">Кредит</a>
+        </li>
+      </ul>
+    </div>
+    <aside class="trademarks">
+      <!-- TODO: Логотипы компаний -->
+    </aside>
+    <aside class="about">
+      <b>О нас</b>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+        компаниями:</p>
+      <ul>
+        <li>Деловые линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a href="#">Подробнее о нас</a>
+    </aside>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <a href="#">Войти</a>
+      </li>
+      <li>
+        <a href="#">Сравнить</a>
+      </li>
+      <li>
+        <a href="#">Корзина</a>
+      </li>
+    </ul>
+    <img src="img/logo_footer.svg">
+    <p>г. Москва, ул. Строителей, 15</p>
+    <ul>
+      <li>
+        <a href="#">Доставка</a>
+      </li>
+      <li>
+        <a href="#">Гарантия</a>
+      </li>
+      <li>
+        <a href="#">Контакты</a>
+      </li>
+    </ul>
+    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+    <div class="social">
+      <ul class="social-list">
+        <li>
+          <a href="#" aria-label="Логотип Фейсбук">
+            <!-- TODO: Вставить Svg логотип -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Логотип Инстаграм">
+            <!-- TODO: Вставить Svg логотип -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Логотип Твиттер">
+            <!-- TODO: Вставить Svg логотип -->
+          </a>
+        </li>
+      </ul>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип-ссылка HTML Academy">
+        <!-- TODO: Вставить Svg логотип -->
+      </a>
+    </div>
+
+  </footer>
+
+</body>
+
 </html>
