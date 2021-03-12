@@ -1,0 +1,250 @@
+:root {
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-yellow: #F7E296;
+  --basic-dark-yellow: #F0C52E;
+  --basic-grey: #E5E5E5;
+
+  --special-black-footer: #363636;
+  --special-yellow-footer: #FFC600;
+  --special-grey-popup: #F2F2F2;
+  --special-pink-invalid: #F6DADA;
+  --special-grey-pages: #EBEBEB;
+  --special-grey-backforward: #D9D9D9;
+}
+
+@font-face {
+  font-family: "Gilroy-Extrabold";
+  src:
+    url("../fonts/gilroyextrabold.woff") format("woff"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src:
+    url("../fonts/gilroylight.woff") format("woff"),
+    url("../fonts/gilroylight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src:
+    url("../fonts/opensans.woff") format("woff"),
+    url("../fonts/opensans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open-SansLight";
+  src:
+    url("../fonts/opensanslight.woff") format("woff"),
+    url("../fonts/opensanslight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global */
+
+.page-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy-Light", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0 auto;
+  padding: 0;
+  width: 1160px;
+  min-height: 100%;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+.header {
+  display: grid;
+  background-color: var(--basic-yellow);
+  margin-top: 40px;
+}
+
+.header-logo {
+  z-index: 2;
+  margin-top: -20px;
+  margin-left: 60px;
+}
+
+.main-navigation {
+  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.main-navigation-list {
+  display: flex;
+}
+
+.main-navigation form {
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.search-field {
+  border: none;
+  background-color: var(--basic-yellow);
+}
+
+.loupe {
+  margin-right: 20px;
+}
+
+.main-navigation-link {
+  margin-left: 10px;
+}
+
+.main-navigation-enter {
+  margin-left: 280px;
+}
+
+.main-navigation-compare {
+  margin-left: 230px;
+}
+
+.main-navigation-basket {
+  margin-left: 40px;
+}
+
+.header-offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+}
+
+.catalog {
+  margin-left: 60px;
+}
+
+.header-offers-link {
+  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  margin-right: 10px;
+}
+
+.header-offers-list {
+  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 180px 180px 100px;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+
+.virt {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.monopodes {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.cameras {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.braceletes {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding-left: 50px;
+}
+
+.watches {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding-left: 50px;
+}
+
+.copters {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  padding-left: 50px;
+}
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-delivery {
+  margin-right: 40px;
+}
+
+.header-guarantee {
+  margin-right: 105px;
+}
+
+
+/* Footer */
+
+.main-footer {
+  background-color: var(--special-black-footer);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
