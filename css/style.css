@@ -96,6 +96,17 @@ ul {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 /* Header */
 
 .header {
@@ -241,7 +252,7 @@ ul {
   margin-right: 105px;
 }
 
-/* Slider Bar */
+/* Main Slider Bar */
 
 .main-slider-container {
   width: 1025px;
@@ -355,7 +366,7 @@ ul {
   top: 240px;
 }
 
-.more-button {
+.more-link {
   font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -363,21 +374,30 @@ ul {
   color: var(--basic-black);
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  display: block;
   position: absolute;
-  bottom: 50px;
-  width: 220px;
-  height: 8px;
-  left: 485px;
-  top: -130px;
-  background: var(--basic-dark-yellow);
+  bottom: 125px;
+  left: 520px;
   position: relative;
 }
 
-.more-link {
+.more-link::before {
+  content: "";
   position: absolute;
-  display: block;
-  left: 45px;
-  top: -6px;
+  top: 50%;
+  left: -33px;
+  z-index: -1;
+  width: 200px;
+  height: 8px;
+  margin-top: -5px;
+  background-color: #f0c52e;
+}
+
+.more-link:hover::before {
+  top: 0;
+  height: 40px;
+  margin: 0;
+  transition: all .3s linear;
 }
 
 .slides-description {
@@ -492,12 +512,155 @@ ul {
 .offers-slider-container {
   background-color: var(--basic-grey);
   width: 1440px;
-  padding: 0px 140px;
+  padding: 0px 160px;
 }
 
 .offers-slider-container ul {
   padding: 0;
   list-style: none;
+}
+
+/* Brands List */
+
+.brands-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0px 160px;
+  padding: 0;
+  column-gap: 30px;
+}
+
+.brands-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 260px;
+  height: 254px;
+  text-align: center;
+}
+
+.brands-list-link {
+  width: 260px;
+  height: 100px;
+}
+
+.brands-list-link-dji {
+  background-image: url(../img/logo_dji_grey.png);
+}
+
+.brands-list-link-dji:hover {
+  background-image: url(../img/logo_dji.png);
+}
+
+.brands-list-link-sp {
+  background-image: url(../img/logo_sp_grey.png);
+}
+
+.brands-list-link-sp:hover {
+  background-image: url(../img/logo_sp.png);
+}
+
+.brands-list-link-gopro {
+  background-image: url(../img/logo_gopro_grey.png);
+}
+
+.brands-list-link-gopro:hover {
+  background-image: url(../img/logo_gopro.png);
+}
+
+.brands-list-link-vive {
+  background-image: url(../img/logo_vive_grey.png);
+}
+
+.brands-list-link-vive:hover {
+  background-image: url(../img/logo_vive.png);
+}
+
+/* Info About */
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
+  width: 1160px;
+  margin: 60px 160px 80px;
+}
+
+.about {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info b {
+  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+}
+
+.info p {
+  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--basic-black);
+}
+
+.btn {
+  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: -1;
+  width: 200px;
+  height: 8px;
+  background-color: #f0c52e;
+}
+
+.about b {
+  position: relative;
+}
+
+.about b::before {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background: var(--basic-black);
+  position: absolute;
+  top: -50px;
+  left: 0px;
+}
+
+.contacts b {
+  position: relative;
+}
+
+.contacts b::before {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background: var(--basic-black);
+  position: absolute;
+  top: -50px;
+  left: 0px;
 }
 
 /* Footer */
