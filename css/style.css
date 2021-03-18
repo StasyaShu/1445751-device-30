@@ -6,6 +6,7 @@
   --basic-yellow-for-plus: rgba(0, 0, 0, 0.3);
   --basic-dark-yellow: #F0C52E;
   --basic-grey: #E5E5E5;
+  --basic-dark-grey-background: #DCDCDC;
 
   --special-black-footer: #363636;
   --special-yellow-footer: #FFC600;
@@ -858,7 +859,7 @@ font-weight: 800;
 }
 
 .catalog-page-navigation-compare {
-  margin-left: 60px;
+  margin-left: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -866,11 +867,10 @@ font-weight: 800;
 
 .catalog-page-navigation-compare svg {
   margin-top: 6px;
-  margin-right: 15px;
 }
 
 .catalog-page-navigation-basket {
-  margin-left: 50px;
+  margin-left: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -878,7 +878,6 @@ font-weight: 800;
 
 .catalog-page-navigation-basket svg {
   margin-top: 6px;
-  margin-right: 15px;
 }
 
 /* Breadcrumbs */
@@ -908,7 +907,69 @@ font-weight: 800;
   line-height: 19px;
   color: var(--basic-black);
   opacity: 0.3;
+  padding: 0;
 }
+
+/* Main */
+
+.sorting-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1440px;
+  height: 70px;
+  background-color: var(--basic-grey);
+  position: relative;
+
+}
+
+.sorting {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: min-content;
+  margin: 0;
+  padding-top: 25px;
+  align-items: center;
+  position: absolute;
+  left: 500px;
+  top: 0;
+}
+
+.sorting ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.sorting-wrap b {
+  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  display: block;
+}
+
+.sorting-wrap-filter {
+  height: 70px;
+  width: 468px;
+  text-align: center;
+  padding-top: 25px;
+  background-color: var(--basic-dark-grey-background);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 /* Footer */
 
