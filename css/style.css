@@ -960,7 +960,7 @@ font-weight: 800;
 
 .sorting {
   display: grid;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: min-content 1fr 1fr;
   grid-template-rows: min-content;
   margin: 0;
   padding-top: 25px;
@@ -981,6 +981,9 @@ font-weight: 800;
   font-size: 14px;
   line-height: 19px;
   color: var(--basic-black);
+}
+
+.sorting-list {
   opacity: 0.3;
 }
 
@@ -1012,6 +1015,18 @@ font-weight: 800;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.scrolling {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  margin: 0;
+}
+
+.scrolling li {
+  display: block;
+  margin-right: 25px;
 }
 
 
