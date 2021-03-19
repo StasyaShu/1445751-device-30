@@ -116,7 +116,7 @@
         </div>
       </section>
       <section class="filters-section">
-        <h1 class="visually-hidden">Каталог товаров</h1>
+        <h1 class="visually-hidden">Инструменты фильтра и сортировки</h1>
         <div class="sorting-wrap">
           <b class="sorting-wrap-filter">Фильтр:</b>
           <div class="sorting">
@@ -150,102 +150,109 @@
             </ul>
           </div>
         </div>
-
-        <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="price-range">
-            <fieldset class="filter-item">
-              <legend>Стоимость</legend>
-              <div class="range">
-                <p class="zero">от 0</p>
-                <p>до 5000</p>
-              </div>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
+      </section>
+      <section class="goods-catalog">
+        <div class="filter-wrapper">
+          <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="price-range">
+              <fieldset class="filter-item">
+                <legend>Стоимость</legend>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
-              </div>
+                <div class="range">
+                  <p>от 0</p>
+                  <p>до 5000</p>
+                </div>
+              </fieldset>
+            </div>
+            <fieldset class="colors-filter">
+              <legend>Цвет</legend>
+              <ul class="colors">
+                <li class="colors-option">
+                  <input class="visually-hidden colors-input-checkbox" type="checkbox" name="black" id="checkbox-black"
+                    checked>
+                  <label for="checkbox-black">Чёрный</label>
+                </li>
+                <li class="colors-option">
+                  <input class="visually-hidden colors-input-checkbox" type="checkbox" name="white" id="checkbox-white">
+                  <label for="checkbox-white">Белый</label>
+                </li>
+                <li class="colors-option">
+                  <input class="visually-hidden colors-input-checkbox" type="checkbox" name="blue" id="checkbox-blue"
+                    checked>
+                  <label for="checkbox-blue">Синий</label>
+                </li>
+                <li class="colors-option">
+                  <input class="visually-hidden colors-input-checkbox" type="checkbox" name="red" id="checkbox-red"
+                    checked>
+                  <label for="checkbox-red">Красный</label>
+                </li>
+                <li class="colors-option">
+                  <input class="visually-hidden colors-input-checkbox" type="checkbox" name="pink" id="checkbox-pink">
+                  <label for="checkbox-pink">Розовый</label>
+                </li>
+              </ul>
             </fieldset>
-            <!-- TODO: скомуниздить стили как у Седоны -->
-          </div>
-          <fieldset>
-            <legend>Цвет</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="black" id="checkbox-black" checked>
-                <label for="checkbox-black">Чёрный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="white" id="checkbox-white">
-                <label for="checkbox-white">Белый</label>
-              </li>
-              <li>
-                <input type="checkbox" name="blue" id="checkbox-blue" checked>
-                <label for="checkbox-blue">Синий</label>
-              </li>
-              <li>
-                <input type="checkbox" name="red" id="checkbox-red" checked>
-                <label for="checkbox-red">Красный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="pink" id="checkbox-pink">
-                <label for="checkbox-pink">Розовый</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Bluetooth</legend>
-            <ul>
-              <li>
-                <input type="radio" name="bluetooth-inc" value="есть" id="yes" checked>
-                <label for="yes">Есть</label>
-              </li>
-              <li>
-                <input type="radio" name="bluetooth-inc" value="нет" id="no">
-                <label for="no">Нет</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button type="submit" name="show">Показать</button>
-        </form>
-        <div class="goods-list">
-          <ul>
-            <li>
-              <img src="#" width="360" height="380" alt="">
+            <fieldset class="bluetooth-available-filter">
+              <legend>Bluetooth</legend>
+              <ul class="availability">
+                <li class="availability-option">
+                  <input class="visually-hidden availability-input-radio" type="radio" name="bluetooth-inc" value="есть"
+                    id="yes" checked>
+                  <label for="yes">Есть</label>
+                </li>
+                <li class="availability-option">
+                  <input class="visually-hidden availability-input-radio" type="radio" name="bluetooth-inc" value="нет"
+                    id="no">
+                  <label for="no">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <a class="button-show" href="#">Показать</a>
+          </form>
+        </div>
+        <div class="goods">
+          <ul class="goods-list">
+            <li class="goods-list-item">
+              <img src="img/catalog_selfie_stick.png" width="360" height="380" alt="Мобильный телефон на обычной селфи-палке">
               <b>Любительская селфи-палка</b>
-              <p>1 100 р.</p>
+              <p>1 100 руб.</p>
             </li>
-            <li>
-              <img src="#" width="360" height="380" alt="">
-              <b>Профессиональная селфи-палка</b>
-              <p>1 500 р.</p>
+            <li class="goods-list-item">
+              <img src="img/catalog_pro_selfie_stick.png" width="360" height="380" alt="Многофункциональная профессиональная селфи-палка">
+              <b>Профессиональная<br>селфи-палка</b>
+              <p>1 500 руб.</p>
             </li>
-            <li>
-              <img src="#" width="360" height="380" alt="">
-              <b>Непотопляемая селфи-палка</b>
-              <p>1 500 р.</p>
+            <li class="goods-list-item">
+              <img src="img/catalog_nowater_selfie_stick.png" width="360" height="380" alt="Подводная селфи-палка с гоу-про на ней">
+              <b>Непотопляемая<br>селфи-палка</b>
+              <p>1 500 руб.</p>
             </li>
-            <li>
-              <img src="#" width="360" height="380" alt="">
-              <b>Селфи-палка «Следуй за мной»</b>
-              <p>1 900 р.</p>
+            <li class="goods-list-item">
+              <img src="img/catalog_hand_selfie_stick.png" width="360" height="380" alt="Манжет на руку с приспособлением для телефона">
+              <b>Селфи-палка «Следуй за<br>мной»</b>
+              <p>1 900 руб.</p>
             </li>
           </ul>
           <div class="pagination">
-            <a href="#">Назад</a>
-            <ul>
-              <li>
+            <a class="back" href="#">Назад</a>
+            <ul class="pages">
+              <li class="pages-item">
                 <a href="#">1</a>
               </li>
-              <li>
+              <li class="pages-item">
                 <a href="#">2</a>
               </li>
-              <li>
+              <li class="pages-item">
                 <a href="#">3</a>
               </li>
             </ul>
-            <a href="#">Вперед</a>
+            <a class="forward" href="#">Вперед</a>
           </div>
         </div>
       </section>
