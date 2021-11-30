@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: "Gilroy-Extrabold";
+  font-family: "Gilroy";
   src:
     url("../fonts/gilroyextrabold.woff") format("woff"),
     url("../fonts/gilroyextrabold.woff2") format("woff2");
@@ -28,7 +28,7 @@
 }
 
 @font-face {
-  font-family: "Gilroy-Light";
+  font-family: "Gilroy";
   src:
     url("../fonts/gilroylight.woff") format("woff"),
     url("../fonts/gilroylight.woff2") format("woff2");
@@ -46,7 +46,7 @@
 }
 
 @font-face {
-  font-family: "Open-SansLight";
+  font-family: "Open-Sans";
   src:
     url("../fonts/opensanslight.woff") format("woff"),
     url("../fonts/opensanslight.woff2") format("woff2");
@@ -65,7 +65,7 @@
 .page-body {
   margin: 0;
   padding: 0;
-  font-family: "Gilroy-Light", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 21px;
   line-height: 21px;
   font-weight: 400;
@@ -73,16 +73,8 @@
   letter-spacing: 0px;
   color: var(--basic-black);
   background-color: var(--basic-white);
-}
-
-.main-container {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  margin: 0 auto;
-  padding: 0;
-  width: 1440px;
-  min-height: 100%;
-  background-color: var(--basic-white);
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -116,43 +108,46 @@ ul {
 .header {
   display: grid;
   background-color: var(--basic-yellow);
-  margin-top: 40px;
-  width: 1160px;
   margin: 40px 140px 500px;
   position: relative;
 }
 
 .header-logo {
-  z-index: 2;
-  margin-top: -20px;
-  margin-left: 60px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  top: -15px;
+  left: 60px;
 }
 
 .main-links-wrapper {
   display: block;
-  width: 1160;
-  height: 245px;
+  height: 300px;
   background-color: var(--basic-yellow);
+  padding: 0 60px;
+}
+
+.overflow {
+  z-index: 4;
 }
 
 .main-navigation {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .main-navigation-list {
   display: flex;
   padding: 0;
-  margin-left: 315px;
+  margin-left: 299px;
 }
 
 .main-navigation form {
-  margin-left: 60px;
   display: flex;
   align-items: center;
 }
@@ -179,24 +174,20 @@ ul {
 }
 
 .header-offers {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 30px;
-}
-
-.catalog {
-  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 .header-offers-link {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--basic-black);
-  margin-right: 15px;
   position: relative;
 }
 
@@ -222,7 +213,7 @@ ul {
 }
 
 .header-offers-list {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -234,11 +225,31 @@ ul {
   grid-template-columns: 180px 180px 100px;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 10px;
+  width: 100%;
+  background-color: var(--basic-yellow);
 }
 
 .header-offers-list-hidden {
   display: none;
 }
+
+.header-offers-list-open {
+  font-family: "Open-Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 180px 180px 100px;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 10px;
+  width: 100%;
+  background-color: var(--basic-yellow);
+}
+
 
 .virt {
   grid-column: 1 / 2;
@@ -284,7 +295,7 @@ ul {
 }
 
 .header-guarantee {
-  margin-right: 105px;
+  margin-right: 133px;
 }
 
 /* Main Slider Bar */
@@ -294,7 +305,7 @@ ul {
   background: transparent;
   position: absolute;
   z-index: 2;
-  top: 150px;
+  top: 186px;
   right: 50px;
 }
 
@@ -352,7 +363,7 @@ ul {
 }
 
 .slides span {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 179px;
   line-height: 219px;
@@ -372,7 +383,7 @@ ul {
 
 .slides b {
   display: block;
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -385,7 +396,7 @@ ul {
 .slides p {
   display: block;
   color: var(--basic-black);
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -406,7 +417,7 @@ ul {
 }
 
 .more-link {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 23px;
@@ -448,7 +459,7 @@ ul {
 }
 
 .contain {
-  font-family: "Gilroy-Light", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 300;
   font-size: 36px;
   line-height: 42px;
@@ -468,7 +479,7 @@ ul {
 }
 
 .caption {
-  font-family: "Gilroy-Light", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
@@ -479,39 +490,53 @@ ul {
 
 /* Main */
 
+.products {
+  margin-bottom: 80px;
+}
+
+.products__wrapper {
+  padding: 0 160px;
+}
+
 .product-list {
   list-style: none;
-  margin: 0px 160px;
+  margin: 0;
   padding: 0;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: min-content;
   height: 230px;
-  width: 1160px;
+  width: 1160px; */
 }
 
 .product-list-item {
-  display: grid;
-  height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-list-item p {
   display: block;
-  width: 130px;
-  margin-right: 40px;
+  width: 135px;
   padding: 0;
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  margin: 0;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
   color: var(--basic-black);
+  text-align: left;
 }
 
 .product-list-link {
   width: 160px;
   height: 160px;
   background: var(--basic-yellow);
+  margin-bottom: 15px;
 }
 
 .virt-reality {
@@ -563,24 +588,26 @@ ul {
 
 /* Brands List */
 
+.trademarks__wrapper {
+  padding: 0 160px;
+}
+
 .brands-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: min-content;
   justify-content: space-between;
-  width: 1160px;
-  margin: 0px 160px;
+  margin: 0;
   padding: 0;
-  column-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 25px;
 }
 
 .brands-list-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 260px;
-  height: 254px;
+  margin: 80px 0;
   text-align: center;
 }
 
@@ -624,24 +651,29 @@ ul {
 /* Info About */
 
 .info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content;
-  width: 1160px;
-  margin: 60px 160px 80px;
+  margin: 57px 0;
 }
 
-.info b {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
-font-weight: 800;
+.info-wrapper {
+  display: grid;
+  grid-template-columns: 475px 560px;
+  grid-template-rows: min-content;
+  padding: 0 160px;
+  grid-column-gap: 30px;
+  justify-content: space-between;
+}
+
+.info-wrapper b {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-weight: 800;
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
   color: var(--basic-black);
 }
 
-.info p {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+.info-wrapper p {
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
@@ -649,14 +681,13 @@ font-weight: 800;
 }
 
 .about {
-  height: 500px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 .btn {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 23px;
@@ -667,6 +698,19 @@ font-weight: 800;
 
 .about b {
   position: relative;
+  margin: 0 0 35px;
+  padding: 0;
+  display: block;
+}
+
+.about p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.about p:first-of-type {
+  margin: 0 0 35px;
 }
 
 .about b::before {
@@ -680,14 +724,13 @@ font-weight: 800;
 }
 
 .transport-companies {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
   color: var(--basic-black);
   list-style: none;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 66px;
   padding: 0;
 }
 
@@ -747,6 +790,9 @@ font-weight: 800;
 
 .contacts b {
   position: relative;
+  display: block;
+  margin: 0 0 35px;
+  padding: 0;
 }
 
 .contacts b::before {
@@ -762,12 +808,12 @@ font-weight: 800;
 .contacts p {
   display: block;
   padding: 0;
-  margin-bottom: 35px;
+  margin: 0 0 45px;
 }
 
 .map {
   display: block;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
 .btn-write {
@@ -811,7 +857,7 @@ font-weight: 800;
 }
 
 .catalog-page-navigation {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -896,7 +942,7 @@ font-weight: 800;
 }
 
 .breadcrumbs-section b {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -907,7 +953,7 @@ font-weight: 800;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -982,7 +1028,7 @@ font-weight: 800;
   padding-left: 74px;
   display: flex;
   flex-wrap: wrap;
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
@@ -1002,7 +1048,7 @@ font-weight: 800;
 }
 
 .sorting-wrap b {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1069,7 +1115,7 @@ fieldset {
 }
 
 .filter legend {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
@@ -1101,7 +1147,7 @@ fieldset {
   align-items: center;
   margin-top: 10px;
   width: 200px;
-  font-family: "Gilroy-Light", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   color: var(--basic-black);
   font-weight: 300;
   font-size: 14px;
@@ -1170,7 +1216,7 @@ fieldset {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -1227,7 +1273,7 @@ fieldset {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -1277,7 +1323,7 @@ fieldset {
 }
 
 .button-show {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 23px;
@@ -1339,7 +1385,7 @@ fieldset {
 }
 
 .goods-list-item b {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1352,7 +1398,7 @@ fieldset {
 }
 
 .goods-list-item p {
-  font-family: "Gilroy-Light", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
@@ -1381,7 +1427,7 @@ fieldset {
   background-color: var(--basic-grey-pagination);
   align-content: center;
   margin-left: 10px;
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1429,7 +1475,7 @@ fieldset {
 }
 
 .footer-navigation a {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -1437,7 +1483,7 @@ fieldset {
 }
 
 .main-footer p {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -1445,7 +1491,7 @@ fieldset {
 }
 
 .phone {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -1453,7 +1499,7 @@ fieldset {
 }
 
 .footer-offers-link {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1573,7 +1619,7 @@ fieldset {
 }
 
 .catalog-footer-navigation a {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -1589,7 +1635,7 @@ fieldset {
 }
 
 .catalog-footer p {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -1613,7 +1659,7 @@ fieldset {
 }
 
 .phone {
-  font-family: "Open-SansLight", Arial, Helvetica, sans-serif;
+  font-family: "Open-Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 21px;
   font-weight: 300;
@@ -1621,7 +1667,7 @@ fieldset {
 }
 
 .footer-offers-link {
-  font-family: "Gilroy-Extrabold", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
